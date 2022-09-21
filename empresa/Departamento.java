@@ -45,6 +45,16 @@ public class Departamento {
         return null;
     }
 
+    public double mediaSalarialDepartamento(){
+        double soma=0;
+        int i=0;
+        for(Funcionario f: funcionarios){
+            soma+=f.getSalario();
+            i++;
+        }
+        return soma/i;
+    }
+
     // métodos do nome
     public String getNome() {
         return nome;

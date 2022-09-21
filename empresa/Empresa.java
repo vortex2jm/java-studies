@@ -35,6 +35,14 @@ public class Empresa {
         return this.departamentos.isEmpty();
     }
 
+    public double mediaSalarialEmpresa(){
+        double media=0;
+        for(Departamento d: departamentos){
+            media+=d.mediaSalarialDepartamento();
+        }
+        return media;
+    }
+
     // retorna o nome da empresa
     public String getNome() {
         return nome;

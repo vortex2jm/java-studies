@@ -19,37 +19,46 @@ public class App {
         backend.addFuncionario(kevin);
         backend.addFuncionario(jaozim);
 
-        Empresa BrabezaOrganization = new Empresa("Brabeza Organization - LTDA");
+        Empresa brabezaOrganization = new Empresa("Brabeza Organization - LTDA");
 
-        BrabezaOrganization.addDepartamento(topcão);
-        BrabezaOrganization.addDepartamento(frontEnd);
-        BrabezaOrganization.addDepartamento(backend);
+        brabezaOrganization.addDepartamento(topcão);
+        brabezaOrganization.addDepartamento(frontEnd);
+        brabezaOrganization.addDepartamento(backend);
 
         System.out.print("======DEPARTAMENTOS======\n\n");
         int i = 0;
-        for(Departamento d: BrabezaOrganization.getDepartamentos()){
+        for(Departamento d: brabezaOrganization.getDepartamentos()){
             System.out.printf("%d -> %s\n",i, d.getNome());
             i++;
         }
-        System.out.print("\n");
+        System.out.print("\nMÉDIA SALARIAL DA EMPRESA\n");
+        System.out.printf("R$%.2f\n\n", brabezaOrganization.mediaSalarialEmpresa());
 
 
-        System.out.printf("####Funcionários do departamento %s####\n\n", topcão.getNome());
+        System.out.printf("####Dados do departamento %s####\n\n", topcão.getNome());
+        System.out.print("FUNCIONÁRIOS\n");
         for(Funcionario f: topcão.getFuncionarios()){
-            System.out.printf("-> %s || salário -> %.2f\n", f.getNome(), f.getSalario());
+            System.out.printf("-> %s || salário -> R$%.2f\n", f.getNome(), f.getSalario());
         }
-        System.out.print("\n");
+        System.out.print("\nMÉDIA SALARIAL DO DEPARTAMENTO\n");
+        System.out.printf("R$%.2f\n\n", topcão.mediaSalarialDepartamento());
 
-        System.out.printf("####Funcionários do departamento %s####\n\n", frontEnd.getNome());
+
+        System.out.printf("####Dados do departamento %s####\n\n", frontEnd.getNome());
+        System.out.print("FUNCIONÁRIOS\n");
         for(Funcionario f: frontEnd.getFuncionarios()){
-            System.out.printf("-> %s || salário -> %.2f\n", f.getNome(), f.getSalario());
+            System.out.printf("-> %s || salário -> R$%.2f\n", f.getNome(), f.getSalario());
         }
-        System.out.print("\n");
+        System.out.print("\nMÉDIA SALARIAL DO DEPARTAMENTO\n");
+        System.out.printf("R$%.2f\n\n", frontEnd.mediaSalarialDepartamento());
 
-        System.out.printf("####Funcionários do departamento %s####\n\n", backend.getNome());
+
+        System.out.printf("####Dados do departamento %s####\n\n", backend.getNome());
+        System.out.print("FUNCIONÁRIOS\n");
         for(Funcionario f: backend.getFuncionarios()){
-            System.out.printf("-> %s || salário -> %.2f\n", f.getNome(), f.getSalario());
+            System.out.printf("-> %s || salário -> R$%.2f\n", f.getNome(), f.getSalario());
         }
-        System.out.print("\n");
+        System.out.print("\nMÉDIA SALARIAL DO DEPARTAMENTO\n");
+        System.out.printf("R$%.2f\n\n", backend.mediaSalarialDepartamento());
     }
 }

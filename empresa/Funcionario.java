@@ -9,6 +9,10 @@ public class Funcionario {
     private int cpf;
     private double salario;
     
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
     public int getCpf() {
         return cpf;
     }
