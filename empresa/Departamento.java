@@ -35,7 +35,7 @@ public class Departamento {
     }
 
     // retorna o funcionario com o cpf correspondente
-    public Funcionario findFuncionarioByCpf(int cpf){
+    public Funcionario findFuncionarioByCpf(String cpf){
 
         for(Funcionario f: funcionarios){
             if(f.getCpf() == cpf){

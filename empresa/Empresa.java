@@ -1,4 +1,5 @@
 import java.util.LinkedList;
+import java.util.List;
 
 public class Empresa {
     
@@ -7,7 +8,7 @@ public class Empresa {
     }
 
     private String nome;
-    private LinkedList<Departamento> departamentos = new LinkedList<Departamento>();
+    private List<Departamento> departamentos = new LinkedList<Departamento>();
 
 
     // retorna a lista de departamentos
