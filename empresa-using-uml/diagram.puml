@@ -1,0 +1,26 @@
+/*
+@startuml test
+Funcionario "*"<--right--> "0..1" Sala : ocupa >
+class Funcionario{
+    -nome: String
+    -idade: int
+    -sala: Sala
+    getNome()
+    getIdade()
+    getSala()
+    setSala()
+}
+class Sala{
+    -numero: int
+    -vagasTotais: int
+    -vagasOcupadas: int
+    -Funcionarios: ArrayList
+    getVagasOcupadas()
+    setVagasOcupadas()
+    getVagasTotais()
+    getNumero()
+    addFuncionario()
+    getFuncionarios()
+}
+@enduml
+*/
